@@ -1,0 +1,257 @@
+1. Introduction
+1.1 Purpose of this Document
+The purpose of this SRS document is to provide a detailed overview of the software
+application, its parameters and goals. This document describes the project’s target
+audience and its user interference, hardware and software requirements. It defines
+how our client, team and audience see the product and its functionality.
+1.2 Scope of the Development Project
+The goal is to design an Android Application for “Tree Census Pilot Project” initiated
+by Pune Municipal Corporation which will facilitate greatly the implementation of
+the laws related to tree Preservation.
+In this application, when a surveyor/user will visit a locality assigned to him, he will survey
+the trees and enter tree’s details such as name of the tree, height of the tree etc.
+into the digital “Form”. He will also Geo-tag the location of the tree and stores all
+these details in the device. The data can also be also saved by uploading the data
+to a central repository (database server) and/or can be e-mailed.
+The Android application must be able to perform the following operations:
+1. Login: Depending on the user type the user will login to the
+application. It would authenticate the users so only legitimate users carry
+out the survey.
+2. Fill in a Digital Form: A digital form is provided for filling details of trees, in
+compliance with the format as prescribed by the Pilot Project Authorities.
+This shall include
+the nomenclature, species, height, girth, etc. Also included are health of the
+tree, ground conditions, hospitable environment for living organisms like
+birds as also the natural yield of trees like flowers, fruits, pods and/ or
+man-made interventions like nails, posters etc.
+The form will be able to take all the dictionaries for names (tree names,
+scientific names etc. as provided by the department) and will be able to 
+support auto completion in text boxes wherever required.
+3.  Geo-Locating:  An icon will be provided which shall take the surveyor/user straight
+ to the camera; the surveyor/user can click a picture which will get saved with the
+data file of the concerned tree. The latitudinal and longitudinal location 
+of the tree shall also be saved which would facilitate geo-mapping on 
+other base map.             
+      The surveyor/user can also capture images separately and then match to 
+      the digital form filled by the same or different surveyor/user.
+
+                         Initially we plan to implement a small prototype with minimum fields of form 
+                         and store the data in the device. After it is successful, then we will further 
+                         implement the form with all the fields mentioned in the document with the format as       
+                          prescribed by the Pilot Project Authorities. It will also include feature of geo-tagging the   
+                         location of the   
+                          tree whose details have been entered. All these details can be saved to the 
+                          device, and also can be uploaded to the central database server. 
+
+
+1.3	References
+ 
+[1]. Requirement specifications. As attached appendix number.
+[2]. www.opentreemap.org
+[3]. www.sandeigo.org
+[4]. Geopapparazzi Android Application - https://play.google.com/store/apps/details?id=eu.hydrologis.geopaparazzi&hl=en
+[5]. www.Itreetools.org
+
+
+1.4	Overview
+
+                    The remaining sections of this document provide a general description, including
+                    characteristics of the users of this application, the product’s hardware, and 
+                    functional and data requirements of the product. General description of the
+                    application is discussed in section 2 of this document. Section 2 gives the  
+                    functional requirements, data requirements and constraints and assumptions
+                    made while designing the application. It also gives the user viewpoint of product use. 
+                    Section 3 gives the specific requirements of the product. Section 3.0 also discusses the 
+                    external interface requirements and gives detailed description of functional requirements. 
+                    
+                    2.  Overall Description
+
+
+2.1	Product Perspective 
+ 
+ 
+Tree Census which was carried out manually is now required to be carried out using modern Technology. The trees in the city would be digitally mapped with civic body tagging each tree 
+and creating a database. 
+             The Pune Municipal Corporation has undertaken “Pune Tree Census Pilot Project” 
+which will help for its next “Tree Census”. The “Tree Census” would be carried out using a
+ digital form for filling the details of tree. 
+
+
+
+2.2	Product Functions
+
+ The product should be able to perform the following operations: 
+
+1.	It must be able to authenticate the surveyor/user whenever he login’s to the application. 
+2.	User must be able to save the details of the tree which have been recorded by the
+       surveyor/user.
+3.	User can click images of the trees and save/discard them. He can click more than one
+                      images of the  same tree.
+4.	 The location of the tree should be geo-tagged and time-stamped with the photos that 
+         are clicked by the surveyor/user. 
+5.	User can delete any images if not required.
+6.	The recorded data can be saved to a local database and/or can be uploaded to the
+ central repository and/or be e-mailed.
+7.	Users can register/unregister themselves from the application.
+8.	The use of tree key will result in an output which will include an option of photographs
+ by the user and remarks like questions and the same can be referred to an expert 
+named by the user. In the process the user may not specify name of the tree instead
+ this tree key will help.
+9.	Users can import and extract the database of the tree.
+2.3  User Characteristics:
+
+
+The goal is to design a “Tree Census” Android Application for “Tree Census Project” for maintaining the tree information and its location which can be further used. The user types are listed below:
+1.	Trial:
+       Users which are surveying the trees during the trial of surveying.
+2.	Self-Owned: 
+        Property owner carrying out own survey. 
+3.	Certification: 
+        Users who are under the certification of surveying data.
+4.	Submission of data:
+        Authorized surveyors who can survey for submission to Database.
+
+
+As one can see from the list, each user will have different knowledge and expertise level
+In surveying techniques. Our goal is to develop software that should be easy to use for all types of users, including the “self-own” users.
+
+The trial and self-owned users can record the data of the tree but it is not mandatory for them to save the data on the central repository.
+While for the “Certification” and “Submission of data” users it is mandatory submit the records to the central repository.
+
+There should be provision of Registration and un-registration of the user. User can adopt a role from Registered User to Unregistered User and Vice-versa. 
+     
+
+
+
+2.4	General Constraints, Assumptions and Dependencies
+
+               The following list presents the constraints, assumptions, dependencies or guidelines
+               that are imposed upon implementation of the “Tree Census” Android Application 
+               based on “Tree Census Pilot Project”.
+
+with an Android Version 4.0 (Ice-Cream Sandwich) and SQLite database version 3.0.
+2.   Registration and Security aspects would be decide at a stage after the server is in operation and security policy is defined. However the data which is collected by My tracks will be associated by the data of the tree (which would be time stamped), which would be used to validate the data.
+3.	The software will capture location position from available sources. If it is possible to capture a position from markers of My track Application while My track Application and Tree Census Application both are running then My track Application’s marker location will be used to override the meta-data of the image.
+4.	On other hand the location data may be obtained independently. The same can be imported on the device in a prescribed format and appended to the database. The format would be indexed to the tree number. The data would also be sent on server will be accepted based on security policy.
+5.	The tree numbering would be done by authorized person wherever the survey is going to take place, and the survey would be carried out within a short period after numbering.
+6.	Trees with multiple stems would be defined as single tree and the DBH will be calculated based on sum of the 6 major stems.
+7.	Clusters of the tree (like some of those in Erandwane) should be treated as special cases by the authorities and surveyor is only to mark it as a special tree. Some of these may not be finally qualify as tree.
+8.	 Numbering process of the trees is assumed to be done unambiguously.
+9.	A tree which falls under minimum height and minimum girth will be counted as valid tree.
+10.	 Trees which are not accessible should be reported as special cases with all possible information that surveyor can collect.
+
+      
+3.	Specific Requirements
+
+1.	Initially the user has to login through the Android application. 
+2.	Once he has successfully logged-in a Dashboard will be presented with the following functions:
+Carry-out survey, Lists of Survey, Import, Export and Take picture.
+3.	If user selects “Carry - Out Survey” then he has to select the area in which he is carrying out the survey. 
+4.	The track of the user can be switched to on or off which would be done using My Track Application. The session of the survey will also be logged.
+5.	Every surveyor will be allotted a ward and a ward would be divided into number of polygons which would be numbered by a 3-digit number. 
+6.	Session would be maintained polygon-wise.
+
+7.  For carrying out the survey user has to first choose the type of Boundary he is going to carry out the survey ( that is In-Boundary or out-Boundary)
+8.	If in Boundary then user has to enter the following details House number, Survey number, Property type, Property Description, Owner name, area of the plot.
+9.	Else if it is outside boundary then he should mention whether it is on Footpath or Dividers.
+10.	After this he has to press the button “Add tree” , so the trees in the same location would be 
+stored by filling the details of the tree in the Digital Form present in the application.
+11.	Every form will have a unique form_id formed by combining ward_number  + polygon_number + tree_number.
+12.	If user wants to change the location, he can do this by selecting the button “Change Location”.
+13.	All the attributes of the tree which includes nomenclature (Local name can be entered and corresponding species name will be displayed), height (which can be entered in “Foot” and its respective value in “meters” will be displayed or vice-versa) and girth (which can be entered in “Centimeter” and its respective value in “meters” will be displayed or vice-versa).
+14.	 Also included are health of the tree (Radio button having options Diseased, Heavily Lopped, Healthy, Nails larger than 5mm or choking due to tree guard is seen) , hospitable environment for living organisms like birds as also the natural yield of trees like flowers, fruits, pods and/ or man-made interventions like nails, posters, wires and  tree-guard.
+15.	 It will also include what types of Ground conditions (Radio buttons having options Open soil, Tiled Cemented or Compressed Soil) are found where the tree is located ( If Ground Condition is “Open soil” then also Select from the following options-Space is nil, 02ft ground, 02ft to 4ft, 04ft to 06ft, 06ft and above) and risk found on tree(Radio button having options “In drain”, “On Wall”, No risk or other). If the risk is other than that given in options then surveyor/user should select the “Other” option and mention the risk in a text-box. 
+16.	Also the spatial data with options of Volatile, Rare, and/or endangered.
+17.	The form will also have an icon which shall  take the surveyor/user straight to the 
+                        camera; the surveyor/user can click a picture which he can save or discard and the details will  
+                        be saved with the data file of the concerned tree. 
+18.	The latitudinal and longitudinal location of the tree shall also be saved which would facilitate on base map. 
+19.	The surveyor/user can also capture many images of the same tree and link it the corresponding Digital Form. She/he can take images to click images showing details of the tree (focused), and/or also in a panorama view.
+20.	The details entered in the Digital Form and corresponding photos tagged to the location and time-stamped can be stored in the local database or can be uploaded the data to the server and/or can be e-mailed the data to the desired e-mail address. 
+
+
+
+
+
+
+
+21.	If a user is unable to identify the tree or is not sure about the tree name (For example: Trees look similar and have same features) an icon/button will be provided called as “Tree Help” through which he will answer some questions. The answers provide may give an output as a tree name or a link which will be displayed in place of tree Local name.
+22.	Data of the trees can be imported to SQLite 3 or exported to CSV format.
+
+
+
+
+3.1	External Interface Requirements
+
+3.1.1	Hardware Interfaces
+
+1.	Application will be deployed and tested on SAMSUNG GALAXY TAB 2 (7”) (Official Model No: 3100) which has following hardware support.
+2.	The above mentioned model has GPS inbuilt.
+3.	Compatible to Android Operating System 4.0 version 
+                     (Ice-Cream Sandwich). 
+4.	Sim Card (with internet 3G or at least 2G).
+5.	Geo-Positioning System (In-built on SAMSUNG GALAXY TAB 2 (7”)).
+6.	USB Cable.
+
+3.1.2	Software Interfaces
+
+a.	Database Necessity - The Tree Census Android Application shall use a database 
+to store data.
+
+b.	Database Connectivity - The Tree Census Android Application database shall be
+ accessible via Cursor.
+c.	Database Query Language - The Tree Census Android Application database shall be query accessible via SQLite3.
+d.	My Track Application.
+e.	Smart Measure.
+f.	Google Maps or Base Maps.
+
+
+
+
+
+
+
+3.1.3	Communication Interfaces
+
+a.	 Internet Connection- 2G, 3G or Wi-fi Connectivity.
+b.	Bluetooth.
+
+
+3.2	Quality Attributes
+
+3.2.1	Adaptability
+
+a.	 Smartphone SAMSUNG GALAXY TAB (7”) (Model No: 3100).
+b.	The software will be adaptable on the newer versions on variety of models subject to necessary testing and code changes which is not a part of present project.
+c.	The software will be accompanied by a detailed documentation so that any developer can independently compile the source code and develop the same. The initial documentation however will be made available from version 0.5 onwards. The complete documentation will be published with Version 1.0 of the Tree Census Application.
+
+
+3.2.2	Availability
+
+1.	Download and install application shall be available through Google App store and other websites of copyright holder, Municipal Corporation etc. as per the choice of site owners.
+
+3.2.3	Testability
+
+a.	User Interface shall be manually fully tested.
+b.	 Method within database section shall be fully tested by J-Unit test.
+c.	All available functionality shall be fully tested before release of each version and the test reports will also be published in due course.
+d.	The testing will be done by an independent agency.
+
+3.2.4	Portability
+
+a.	Currently not available on any platform other than Android.
+
+3.3 Other Requirements
+
+1.  The data from this application must integrate with Open Tree Map and its current instance on Treemapindia.in.
+2.	This application must also integrate with tree key being developed by department.
+
+5.  Future Scope:
+
+a.	Once the text matter is translated in local language the same should be available as an option in GUI and databases.
+b.	It should be possible to extend all the parameters of i-Tree for various evaluations.
+
+        
+
+
+
