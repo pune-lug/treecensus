@@ -1,0 +1,70 @@
+Table Name = Tree_deatil
+
+_id    		        Number AutoIncrement
+Tree_name		    	Text
+Botanical_name		Text
+
+
+
+
+Table Name = Unique_area_details
+
+_id			    	   Number AutoIncrement
+ward_no				   Text
+poly_no				   Text
+form_key			   Text
+
+
+
+Table Name = Area_details
+
+_id				              Number AutoIncrement
+form_key		    	      Text
+boundary_type			      Text	
+property_type			      Text
+property_description	  Text
+property_area		      	Real
+property_owner	   	  	Text
+house_no		          	Text
+survey_no			          Text
+place_type		        	Text
+
+
+
+
+Table Name = Survey_details
+
+ 
+_id				            Number AutoIncrement
+form_no				        Text
+prop_id				        Text	
+tree_no				        Text
+tree_name			        Text
+botanical_name	    	Text
+girth_cm			        Real
+girth_m				        Real
+height_ft			        Real
+height_m			        Real
+nest				          Text
+burrows				        Text
+flowers				        Text
+fruits				        Text
+nails				          Text
+poster				        Text
+wires				          Text
+tree_guard			      Text
+other_nuissance		    Text
+other_nuissance_desc	Text
+health_of_tree		    Text
+found_on_ground		    Text
+ground_description		Text
+risk_on_tree			    Text
+risk_desc			        Text
+rare				          Text
+endangered			      Text
+vulenrable			      Text
+pest_affected			    Text
+refer_to_dept			    Text
+special_other			Text
+special_other_description	Text
+creation_date			Text
