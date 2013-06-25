@@ -67,4 +67,6 @@ pest_affected			    Text
 refer_to_dept			    Text
 special_other			Text
 special_other_description	Text
+latitude            Text
+longitude           Text
 creation_date			Text
