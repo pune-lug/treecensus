@@ -8,6 +8,26 @@ how our client, team and audience see the product and its functionality.
 The goal is to design an Android Application for “Tree Census Pilot Project” initiated
 by Pune Municipal Corporation which will facilitate greatly the implementation of
 the laws related to tree Preservation.
+Scenario of survey
+    The tablets belong to the municipal corporation , currently
+    We can think of  individuals, community memners using their tablets but quite a chance that a device is shared by many users and same user may use different device
+    teams undertake certain designated areas: where areas are clusters in a prabhag
+    the data is accumulated on the device and is to be sent to server in batch mode.
+    data of several sessions may be accumulated on the device
+    every device has a unique ID as a machine. That ID is to be used for device ID
+    users are to be registerd on a website
+    there will be around 500 to 1000 max surveyors in a city
+    Device should sync with server occasionally
+    Server has a reputation module: assigns reputation as per quality and quantity of tree data
+    the registered users tables ( name , reputation, passowrds ) should be loaded on the device
+    users can log in to the app either as guest or as registered users
+    the treatment of data of registerd users and guests will differ
+    we have set of people who  include malis( literate upto 12th or so) , graduates with some training etc.
+    sometimes they do not know exact tree
+    we are working on Treekey ( refer urbantreekey.org  and treelist I will share with you on fusion table ): the help to answer questions on observed features of tree to figure out which tree it is , AFTER some traing
+
+
+
 In this application, when a surveyor/user will visit a locality assigned to him, he will survey
 the trees and enter tree’s details such as name of the tree, height of the tree etc.
 into the digital “Form”. He will also Geo-tag the location of the tree and stores all
