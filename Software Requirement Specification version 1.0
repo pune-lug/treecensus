@@ -153,10 +153,10 @@ Carry-out survey, Lists of Survey, Import, Export and Take picture.
 
 7.  For carrying out the survey user has to first choose the type of Boundary he is going to carry out the survey ( that is In-Boundary or out-Boundary)
 8.	If in Boundary then user has to enter the following details House number, Survey number, Property type, Property Description, Owner name, area of the plot.
-9.	Else if it is outside boundary then he should mention whether it is on Footpath or Dividers.
+9.	Else if it is outside boundary where such ownership details are not relevant, then he should mention whether it is on Footpath or Dividers.
 10.	After this he has to press the button “Add tree” , so the trees in the same location would be 
 stored by filling the details of the tree in the Digital Form present in the application.
-11.	Every form will have a unique form_id formed by combining ward_number  + polygon_number + tree_number.
+11.	Every form will have a unique form_id formed by combining ward_number  + cluster_number + tree_number, joined by underscore.
 12.	If user wants to change the location, he can do this by selecting the button “Change Location”.
 13.	All the attributes of the tree which includes nomenclature (Local name can be entered and corresponding species name will be displayed), height (which can be entered in “Foot” and its respective value in “meters” will be displayed or vice-versa) and girth (which can be entered in “Centimeter” and its respective value in “meters” will be displayed or vice-versa).
 14.	 Also included are health of the tree (Radio button having options Diseased, Heavily Lopped, Healthy, Nails larger than 5mm or choking due to tree guard is seen) , hospitable environment for living organisms like birds as also the natural yield of trees like flowers, fruits, pods and/ or man-made interventions like nails, posters, wires and  tree-guard.
@@ -169,16 +169,10 @@ stored by filling the details of the tree in the Digital Form present in the app
 19.	The surveyor/user can also capture many images of the same tree and link it the corresponding Digital Form. She/he can take images to click images showing details of the tree (focused), and/or also in a panorama view.
 20.	The details entered in the Digital Form and corresponding photos tagged to the location and time-stamped can be stored in the local database or can be uploaded the data to the server and/or can be e-mailed the data to the desired e-mail address. 
 
-
-
-
-
-
-
-21.	If a user is unable to identify the tree or is not sure about the tree name (For example: Trees look similar and have same features) an icon/button will be provided called as “Tree Help” through which he will answer some questions. The answers provide may give an output as a tree name or a link which will be displayed in place of tree Local name.
+21.	If a user is unable to identify the tree or is not sure about the tree name (For example: Trees look similar and have same features) an icon/button will be provided called as “Tree Help” in the form of TreeKey (like www.urbantreekey.org ) through which he will answer some questions. The answers provide may give an output as a tree name or a link which will be displayed in place of tree Local name.
 22.	Data of the trees can be imported to SQLite 3 or exported to CSV format.
-
-
+23 . There have been cases of surveys where data is cooked. The idea that we have a timestamped track of path is considered by  the authorities as appropriate. They need a foolproof way to obviate data-cooking and if any happens, they have a way to verify and legal tool to fight.  so functionality is important, not the specific app like MyTracks
+24 . Maintainability : As far as possible we should reuse code which is maintained by some reliable agency. treemapindia app is currently (july 2013) not with such arrangement. We are looking for an agency to do so. Such an agency will be cotractually committed
 
 
 3.1	External Interface Requirements
@@ -201,8 +195,8 @@ to store data.
 b.	Database Connectivity - The Tree Census Android Application database shall be
  accessible via Cursor.
 c.	Database Query Language - The Tree Census Android Application database shall be query accessible via SQLite3.
-d.	My Track Application.
-e.	Smart Measure.
+d.	My Track Application (or better).
+e.	Smart Measure.(or better )
 f.	Google Maps or Base Maps.
 
 
